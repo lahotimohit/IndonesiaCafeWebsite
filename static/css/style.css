@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.bg {
+  background: url("/static/assets/bg.jpg");
+  background-size: cover;
+  z-index: -1;
+  filter: brightness(0.2) blur(2px);
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+}
+
+.main-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  width: 100%;
+}
+
+.title {
+  color: rgb(255, 199, 120);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 52pt;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  color: rgb(217, 67, 25);
+}
+
+.subpart {
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  padding: 10px;
+  width: 50%;
+}
+
+.hotel-details {
+  display: flex;
+  gap: 10px;
+  font-family: "Poppins";
+  padding: 20px;
+  align-items: center;
+  max-width: 1000px;
+}
+
+.hotel-desc {
+  display: flex;
+  flex-direction: column;
+}
+
+.hotel-desc h1 {
+  color: rgb(235, 255, 83);
+  font-size: 24pt;
+}
+
+.hotel-desc p {
+  color: rgb(255, 255, 255);
+  min-height: 50px;
+}
+
+.hotel-desc h3 {
+  color: rgb(0, 252, 67);
+}
+
+.hotel-desc a {
+  background-color: rgb(255, 251, 251);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  padding: 5px 10px;
+  margin-top: 5px;
+  width: fit-content;
+  border-radius: 10px;
+  text-decoration: none;
+  transition: 0.1s all ease;
+  box-shadow: 2px 2px 0px white;
+}
+
+.hotel-desc a:hover {
+  background-color: rgb(222, 219, 219);
+  box-shadow: 0px 0px 0px white;
+  transform: scale(1.05);
+}
+
+.hotel-desc a:active {
+  background-color: rgb(222, 219, 219);
+  box-shadow: 0px 0px 0px white;
+  transform: scale(0.95);
+}

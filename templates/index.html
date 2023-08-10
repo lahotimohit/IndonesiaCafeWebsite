@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Cafe Seeking</title>
+    <link href="static/css/style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="bg"></div>
+    <div class="main-app">
+      <h1 class="title">Inodnesia <span class="subtitle">Cafe's</span></h1>
+      <div class="hotels">
+        {% for i in range(size) %}
+        <div class="hotel-details">
+          <div class="hotel-image">
+            <a
+              href="{{ data['results']['data'][i]['photo']['images']['large']['url'] }}"
+            >
+              <img
+                src="{{ data['results']['data'][i]['photo']['images']['medium']['url'] }}"
+                width="260"
+                height="170"
+              />
+            </a>
+          </div>
+          <div class="hotel-desc">
+            <h1>{{ data['results']['data'][i]['name'] }}</h1>
+            <p>{{ data['results']['data'][i]['address'] }}</p>
+            <h3>
+              Rating:
+              <span class="rating-value">
+                {{ data['results']['data'][i]['rating'] }}
+              </span>
+            </h3>
+            <a href="{{ data['results']['data'][i]['website'] }}">
+              Go to the hotel</a
+            >
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>
